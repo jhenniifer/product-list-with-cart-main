@@ -1,9 +1,11 @@
 const addToCartBtn = document.querySelectorAll('.add_to_cart');
 const addOrMinusBtn = document.querySelectorAll('.cart__selected');
 let cartNum = document.querySelectorAll('.cart__num');
-const cartMinus = document.querySelector('.cart__minus');
-const cartAdd = document.querySelector('.cart__add');
+const cartMinus = document.querySelectorAll('.cart__minus--btn');
+const cartAdd = document.querySelectorAll('.cart__add--btn');
+let productQuan = document.querySelectorAll('.cart__quantity')
 let cartCount = 0;
+// let productCount = 0;
 
 addToCart();
 
@@ -16,17 +18,40 @@ cartBtn.addEventListener('click',() => {
         num.innerText = cartCount;
         console.log(cartNum)
     })
-
 cartBtn.style.display = 'none';
+
 addOrMinusBtn.forEach(element => {
-    
-    if(element !== cartBtn.nextElementSibling){
+
+  if(element !== cartBtn.nextElementSibling){
         element.display = 'none';
     } else{
         element.style.display = 'flex';
     }
 });
-})
+
+cartAdd.forEach(add => {
+    add.addEventListener('click',()=>{
+        let product = add.previousElementSibling;
+        console.log(product);
+        let currentQuan = parseInt(product.innerText);
+        product.innerText = currentQuan + 1;
+        cartCount++;
+        cartNum.forEach((num) => {
+            num.innerText = cartCount;
+            
+        })
+           
+         })
+    });
+});
+
 })
 }
+
+
+
+
+
+
+
 

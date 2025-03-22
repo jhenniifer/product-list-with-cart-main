@@ -104,6 +104,13 @@ main{
     border-radius: 5rem;
 }
 
+.cart__selected button{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
 .addSelected{
     display: flex;
 }
