@@ -7,7 +7,7 @@ let cartCount = 0;
 
 addToCart();
 
-function addToCart(){
+function addToCart(){  
 
 addToCartBtn.forEach((cartBtn) => {
 cartBtn.addEventListener('click',() => {
