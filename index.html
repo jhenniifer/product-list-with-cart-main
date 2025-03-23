@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="stylesheet" href="/styles/style.css">
   <title>Frontend Mentor | Product list with cart</title>
-  <script src="/script.js" defer ></script>
+  <script src="/app.js" defer ></script>
 </head>
 <body>
   <main>
@@ -92,15 +92,15 @@
     </section>
     <section class="cart">
 
-      <div class="cart__initial">
+    <div class="cart__initial">
       <h2 class="cart__heading">
         Your Cart (<span class="cart__num">0</span>)
       </h2> 
-    <div class="cart__content">
-        <img src="/assets/images/illustration-empty-cart.svg" alt="" class="cart__default__img">
-        <p class="cart__default__text">Your added items will appear here</p>
-    </div>
-      </div> 
+      <div class="cart__content">
+          <img src="/assets/images/illustration-empty-cart.svg" alt="" class="cart__default__img">
+          <p class="cart__default__text">Your added items will appear here</p>
+      </div>
+    </div> 
     
     <div class="cart__ordered">
       <h2 class="cart__heading">
@@ -113,13 +113,13 @@
             <p class="added__name">Waffle with Berries</p>
             <div class="added__num">
               <p
-               class="added__amount"><span class="added">1</span>x
+               class="added__amount"><span class="addedd">1</span>x
               </p>
               <p
-               class="added__price">@$<span class="price">5.50</span>
+               class="added__price">@$<span class="price">6.50</span>
               </p>
               <p
-               class="added__total">$<span class="total">5.50</span>
+               class="added__total">$<span class="total"></span>
               </p>
             </div>
           </div>
@@ -135,7 +135,7 @@
     <div class="cart__hidden">
       <div class="cart__total">
         <p class="total__text">Order Total</p>
-        <p class="total__total">$46.50</p>  
+        <p class="total__total">$ <span class="total__span"></span></p>  
       </div>
       <div class="carbon__neutral">
         <img src="/assets/images/icon-carbon-neutral.svg" alt="Explotion Image" class="carbon__img">
